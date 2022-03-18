@@ -15,7 +15,10 @@ describe 'A tile set' do
     end
 
     it 'returns an array of tiles whose values increase from 1, by 1' do
-      skip
+      (1..9).each do |n| 
+        tile_set = TileSet.generate(n)
+        expect((tile_set).count).to eq(n)
+      end
     end
 
   end
